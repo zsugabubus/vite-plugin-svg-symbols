@@ -1,0 +1,62 @@
+{
+	"name": "vite-plugin-svg-symbols",
+	"version": "0.1.0",
+	"description": "Combine multiple SVGs files into one",
+	"scripts": {
+		"build": "tsc -p .",
+		"fmt:fix": "prettier --write .",
+		"lint:fix": "eslint . --color --fix",
+		"fix": "npm run lint:fix && npm run fmt:fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://@github.com/zsugabubus/vite-plugin-svg-symbols"
+	},
+	"keywords": [
+		"vite",
+		"vite-plugin",
+		"svg",
+		"svg-prite",
+		"svgo"
+	],
+	"author": "",
+	"license": "MIT",
+	"peerDependencies": {
+		"vite": ">=4.0.0"
+	},
+	"devDependencies": {
+		"@rollup/pluginutils": "^5.0.2",
+		"@types/node": "^18.16.2",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"eslint": "^8.39.0",
+		"eslint-config-prettier": "^8.8.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"svgo": "^3.0.2"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.js",
+			"import": "./dist/index.js"
+		},
+		"./client": {
+			"types": "./client.d.ts"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist",
+		"client.d.ts"
+	],
+	"prettier": {
+		"useTabs": true,
+		"trailingComma": "all",
+		"singleQuote": true
+	}
+}
